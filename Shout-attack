@@ -112,7 +112,7 @@ while True:
     
     headers = CaseInsensitiveDict()
     headers["x-app-key"]="000oc0so48owkw4s0wwo4c00g00804w80gwkw8kg"
-    headers["x-api-key"] = "d02d96e4b1fa22b29b2d07b7e993e5d3"
+    headers["x-api-key"] = "d02d96e4b1fa2888882b29b2d07b7e993e5d3"
     headers["User-Agent"] = "gzip"
     
     try:
@@ -124,10 +124,9 @@ while True:
     if resp.json()["rdesc"] == "OK":
     
     
-            y= resp.json()["data"]["mlstatus_item"]
     
-    bomList = []
     
+
     
     os.system('clear')
     
@@ -164,12 +163,10 @@ while True:
     
 #    os.system("lolcat 01.py")
     
-    if bool:
-        for user in y:
+        
     
-            bomList.append(user["msisdn"])
+     
     
-            for msisdn in bomList:
                 import requests
                 import time
                 from requests.structures import             CaseInsensitiveDict
@@ -189,7 +186,7 @@ while True:
     
     
     
-                data2 = "op=getOTC&pin=21799&app_version=78&msisdn="+number
+                data2 = "op=msisdn="+number
                 for i in range(1):
                     try:
                         x = requests.post(url2, headers=headers2, data=data2)
